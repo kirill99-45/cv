@@ -11,9 +11,7 @@ const LargePhoto = ({ layoutState, setLayoutState }) => {
       if (event.key === 'Escape') {
         setLayoutState({ className : 'layout-hidden' })
         body.style.position = 'static'
-      } else if (event.key === 'ArrowLeft') {
-        // Change Slide
-      }
+      } ]
     }
 
     window.addEventListener('keydown', setSlide)
@@ -60,16 +58,3 @@ const LargePhoto = ({ layoutState, setLayoutState }) => {
 }
 
 export default LargePhoto;
-
-// <ul className='screens__nav-container'>
-  // <li className='dot'/>
-  // <li className='dot'/>
-  // <li className='dot'/>
-  // <li className='dot'/>
-// </ul>
-
-// {
-//   layoutState.description.map(item => {
-//   return <pre className='large-photo__steps'>{item}</pre>
-//   })
-// }
