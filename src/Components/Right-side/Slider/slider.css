@@ -1,0 +1,75 @@
+.project__photo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 20px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.prev-slide, .next-slide {
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  top: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.prev-slide {
+  background-image: URL('https://cdn-icons-png.flaticon.com/512/860/860790.png');
+  transform: translateY(-50%);
+  left: 0;
+  cursor: pointer;
+}
+
+.next-slide {
+  background-image: URL('https://cdn-icons-png.flaticon.com/512/860/860790.png');
+  transform:  translateY(-50%) rotate(180deg);
+  right: 0;
+  cursor: pointer;
+}
+
+.prev-slide:hover, .next-slide:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+
+.project__photo-wrapper {
+  width: 200px;
+  height: 150px;
+  opacity: 0.6;
+  transition: 0.3s;
+}
+
+.active {
+  transform: scale(130%);
+  opacity: 1;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.project__photo-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.photo__nav-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 5px;
+  margin-top: 30px;
+}
+
+.dot {
+  width: 5px;
+  height: 5px;
+  background: #233142;
+  border-radius: 50%;
+}
