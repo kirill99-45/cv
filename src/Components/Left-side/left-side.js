@@ -67,7 +67,7 @@ const LeftSide = () => {
             </li>
             <li className='contact__wrapper'>
               <div className='img__wrapper'>
-                <img src='https://cdn-icons.flaticon.com/png/512/3178/premium/3178158.png?token=exp=1659450488~hmac=2d6849ace2f7d8ee4802db4ffaa3ac35' alt='icon' />
+                <img src='https://cdn-icons.flaticon.com/png/512/3178/premium/3178158.png?token=exp=1660240892~hmac=6b117ecb07a3368eb8485ecd16bfb8ee' alt='icon' />
               </div>
               <span><a href='https://vk.com/im?sel=270124671' target='_blank'>kirill99_45@mail.ru</a></span>
             </li>

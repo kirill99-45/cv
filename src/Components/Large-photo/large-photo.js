@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import Slider from './slider.js';
 import './large-photo.css';
 
 const LargePhoto = ({ layoutState, setLayoutState }) => {
@@ -20,7 +21,6 @@ const LargePhoto = ({ layoutState, setLayoutState }) => {
     return () => window.removeEventListener('keydown', setSlide)
   })
 
-
   if (layoutState.data) {
 
     body.style.position = 'fixed' // Фиксация страницы под слайдером
@@ -31,21 +31,7 @@ const LargePhoto = ({ layoutState, setLayoutState }) => {
         <div className='large-photo__wrapper'>
           <div className='large-photo__screen-wrapper'>
             <h3>{layoutState.title}</h3>
-            <div className='screens__container'>
-              <div className='screen__next' />
-              <div className='screen__large-wrapper'>
-                <img src={layoutState.data[0].largeScreen} alt='Large photo'/>
-              </div>
-              <div className='screens__small'>
-                <div className='screen__wrapper'>
-                  <img src={layoutState.data[0].smallScreens[0]} alt='Large photo' />
-                </div>
-                <div className='screen__wrapper'>
-                  <img src={layoutState.data[0].smallScreens[1]} alt='Large photo' />
-                </div>
-              </div>
-              <div className='screen__prev' />
-            </div>
+            <Slider slides={layoutState.data}/>
           </div>
           <div className='large-photo__descritpion-wrapper'>
             <ul className='large-photo__descritpion-activity'>

@@ -19,15 +19,15 @@
 }
 
 .prev-slide {
-  background-image: URL('https://cdn-icons-png.flaticon.com/512/860/860790.png');
+  background-image: URL('https://cdn-icons-png.flaticon.com/512/271/271220.png');
   transform: translateY(-50%);
   left: 0;
   cursor: pointer;
 }
 
 .next-slide {
-  background-image: URL('https://cdn-icons-png.flaticon.com/512/860/860790.png');
-  transform:  translateY(-50%) rotate(180deg);
+  background-image: URL('https://cdn-icons-png.flaticon.com/512/271/271228.png');
+  transform:  translateY(-50%);
   right: 0;
   cursor: pointer;
 }

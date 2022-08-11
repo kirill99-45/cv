@@ -36,12 +36,19 @@ const Store =
         slidesContainer :
         [
           {
-            largeScreen : 'https://sun9-59.userapi.com/impf/c637221/v637221962/46160/tufyItZMWEU.jpg?size=1280x853&quality=96&sign=490abecec811ff3881211a385aa0fe3e&type=album',
-            smallScreens :
-            [
-              'https://sun9-66.userapi.com/impf/c852028/v852028564/15dd46/tqJiJF2NMJc.jpg?size=640x633&quality=96&sign=64706f381fa122ad0c6c67538da6e5f5&type=album',
-              'https://sun9-52.userapi.com/impf/c837520/v837520587/2df67/r0lIH1_iD_k.jpg?size=704x627&quality=96&sign=726f0d330fb1b7e073c0c133e286057d&type=album'
-            ],
+            id: 1,
+            title : 'WEATHER API',
+            src : `https://sun9-15.userapi.com/impg/_sp6y9oHx_1uEYM5jfX-eSwAooGS9ZhmDN8IhA/vVLrknfsLrQ.jpg?size=857x372&quality=96&sign=48ae26e2ef3ef17214f4fc6c9bd0dfb4&type=album`,
+          },
+          {
+            id: 2,
+            title : 'Currency',
+            src : `https://sun9-22.userapi.com/impg/_gUQyeoU-v7VgvBwGb2T4C3Fd-VPhN0VjGaNmQ/Olw6NmC2X4g.jpg?size=518x139&quality=96&sign=8d27c3c055502cfa819ccc771bde5ff5&type=album`,
+          },
+          {
+            id: 3,
+            title : 'JSONplaceholder',
+            src : `https://sun9-19.userapi.com/impg/XfKJegfXHTyBX7SnoJ09wzT7r3_Hx901cQs8wA/_udqegwCQoI.jpg?size=947x211&quality=96&sign=b7703282af6d3f3c8287558185eab9cf&type=album`,
           },
         ]
       },
@@ -52,7 +59,7 @@ const Store =
         description :
         [
           {
-            title : '',
+            title : 'Страница постов для мобильных устройств',
             body : `В ходе разработки учтена возможность использования пользователем устройств различных размеров, от 1200 до 280 пикселей в ширину.
             В результате чего расположение и стилизация элементов адаптируется под каждый размер, что сохраняет визуальную целостность приложения.`,
           }
@@ -60,17 +67,49 @@ const Store =
         slidesContainer :
         [
           {
-            largeScreen : 'https://sun9-46.userapi.com/impf/c836422/v836422532/1557f/i86XPXdX-Xo.jpg?size=760x506&quality=96&sign=a5c01731d399abbaac1e0c5915f729bf&type=album',
-            smallScreens :
-            [
-              'https://sun9-22.userapi.com/impf/c837539/v837539621/a633/fwszoe34aVk.jpg?size=646x807&quality=96&sign=3469ffc80ff1ad15854dafeebff30d42&type=album',
-              'https://sun9-73.userapi.com/impf/c836128/v836128006/176f7/7WaJ-IMcN9A.jpg?size=475x475&quality=96&sign=bdbf88fb5bda0b86fdb536207fa976bd&type=album'
-            ],
+            id: 4,
+            title : 'Страница постов для мобильных устройств',
+            src : `https://sun1-90.userapi.com/impg/6jKv46W7uTlgfM_-EBXQYkRnCrdN-jGmtV_Dbg/IouEN5jd47A.jpg?size=460x532&quality=96&sign=2032f937b4016b68fb9c078a410cc48a&type=album`,
+          },
+          {
+            id: 5,
+            title : 'Страница пользователя для компьютеров',
+            src : `https://sun9-57.userapi.com/impg/tY414-auciOyGavXAVC6kUQ4zUaFW8yPej5pZg/_VolemqJJq8.jpg?size=457x546&quality=96&sign=a08e041c3cbc1307cc97f66202400c74&type=albu`,
+          },
+          {
+            id: 6,
+            title : 'Страница пользователя для компьютеров',
+            src : `https://sun1-16.userapi.com/impg/KDb5llEX-ipsSC_ByhZyhvq9Y9jtQySc23Yohw/H13Zq_0BEGo.jpg?size=1280x685&quality=96&sign=4b424ab100e24af3e733b901cfb2babf&type=album`,
+          },
+          {
+            id: 7,
+            title : 'Страница всех пользователей для мобильных устройств',
+            src : `https://sun9-8.userapi.com/impg/Q44002749dQhsBERRH06KGz2JYos6XmXFRWRng/gO579-ST8n8.jpg?size=456x530&quality=96&sign=1ba6292d811b0e2bec874f31035a4fef&type=album`,
+          },
+          {
+            id: 8,
+            title : 'Страница пользователя для мобильных устройств',
+            src : `https://sun9-39.userapi.com/impg/1Vghdk86CpgfqvF1hPV7OGQYa3efZybLPT8wwA/AD0WH9UhIZc.jpg?size=460x536&quality=96&sign=67c9f212559edea480103980f70137a4&type=albu`,
+          },
+          {
+            id: 9,
+            title : 'Страница фильма для компьютеров',
+            src : `https://sun9-35.userapi.com/impg/NFwJHSoWHxazX-NO9z8xQR8cRWRQ2_v1q6pojQ/eQbLvCpmsoA.jpg?size=1280x688&quality=96&sign=4e15af7d3231ff49ddb608c72ae1b2a0&type=album`,
+          },
+          {
+            id: 10,
+            title : 'Страница фильма для мобильных устройств',
+            src : `https://sun1-98.userapi.com/impg/WCmgqWTf0hyNHsbGESSuYoA2pFqn1vvc4zkWMw/j7lEpQjumYk.jpg?size=456x553&quality=96&sign=6ac91e770bbb1f83f08e3d53ccc3fbd4&type=album`,
+          },
+          {
+            id: 11,
+            title : 'Страница фильма для мобильных устройств',
+            src : `https://sun9-13.userapi.com/impg/4hSYeUB1XDmgRvN-ET5X-YTcBTPLkGj7YeACMg/5rjKp3unvK8.jpg?size=460x536&quality=96&sign=aa0cdeeea9080a900981615cc755f804&type=album`,
           },
         ],
-      },
+       },
       {
-        id : 3,
+        id : 30,
         mainSliderSrc : 'https://www.businessprocessincubator.com/wp-content/uploads/thumbnails/thumbnail-164503.jpg',
         title : 'Функционал приложения',
         result : [],
@@ -95,7 +134,7 @@ const Store =
             основной слайд, который выведен на большом слайде. Есть возможность управлять слайдами как с помощью большого слайда (стрелки по бокам), так и мини-слайдера – клики на нужных слайдах.
 
             Второй слайдер отличается тем, что он отображает не только нужный слайд, но и дополнительную информацию, связанную с данным слайдом – комментарии, дата создания,
-            номер слайда, пользователя, чей это слайд, количество лайков. Также присутствует возможность оставлять комментарии к данному слайду. Есть валидация на наличие\отсутствие комментариев.`,
+            номер слайда, пользователя, чей это слайд, количество лайков. Также присутствует возможность оставлять комментарии к данному слайду. Есть валидация на наличие/отсутствие комментариев.`,
           },
           {
             title : 'Г) Роутинг:',
@@ -124,12 +163,44 @@ const Store =
         slidesContainer :
         [
           {
-            largeScreen : 'https://sun9-39.userapi.com/impf/hZEfTqQvumFOk7lcBKwSYvNm01aMKPoz2nV9Dg/2TE7eU8cJ0M.jpg?size=800x480&quality=96&sign=c32e49ec54b32ffbf0a8c0ec0e1e4d72&type=album',
-            smallScreens :
-            [
-              'https://sun9-57.userapi.com/impf/Pq0ufQmVZtRnuNZFbkbX6szZl-S7Zl4a9ELWgw/BHX3PN-52ck.jpg?size=528x807&quality=96&sign=aff027c93dd1b6265028a0707d6e7f4e&type=album',
-              'https://sun9-62.userapi.com/impf/c629301/v629301937/2f8d3/gpL1V6QNwiA.jpg?size=604x604&quality=96&sign=3013ae9c45fd176d7ef2e4c6611cc9cc&type=album'
-            ],
+            id: 12,
+            title : 'Фильтрация данных',
+            src : `https://sun9-13.userapi.com/impg/xDCL8IbIxPWBzt_ubqryI844rlpMxcMUVx6d9A/M7SgQRV3Zbk.jpg?size=1280x504&quality=96&sign=122030775f97da7cb85f9c426f42608e&type=album`,
+          },
+          {
+            id: 13,
+            title : 'Слайдер',
+            src : `https://sun9-84.userapi.com/impg/GUur3LxUzY5AsrrAwFLqwiegCwanOIzSqj_U0Q/hHNhvTFEcwk.jpg?size=593x618&quality=96&sign=1a624b4a370671415463c423eb5abe96&type=album`,
+          },
+          {
+            id: 14,
+            title : 'Роутинг',
+            src : `https://sun1-85.userapi.com/impg/Twst0K5WruAdar4-pYG35wbdoyMQKsb66c1FeQ/Nr5Pur1uVnk.jpg?size=935x479&quality=96&sign=f3825b4a7322ad325a2d9d86d936a883&type=album`,
+          },
+          {
+            id: 15,
+            title : 'Живой поиск',
+            src : `https://sun9-46.userapi.com/impg/O4918rCmXqMOddzmzoNQIVJYbqR0JqTH7UOEIw/EL04MYTCgKo.jpg?size=1280x477&quality=96&sign=aa1abf8268d7df316efd3e8e350a7469&type=album`,
+          },
+          {
+            id: 16,
+            title : 'Валидация',
+            src : `https://sun9-14.userapi.com/impg/I01RD7pfVRoFvTT5dCOTa-vy4ipyVYvzPSYtqg/JATxAKZYU7I.jpg?size=961x413&quality=96&sign=31e9338afcb08ff82aebfde01fa74977&type=album`,
+          },
+          {
+            id: 17,
+            title : 'Обработка данных',
+            src : `https://sun1-90.userapi.com/impg/II-uBycp6MUYets2LYavIG85DiMspKL-cJCJ2A/5pDC-qh9pek.jpg?size=829x537&quality=96&sign=dbfbd4dfb02d0d01c3e30b5477585bf8&type=album`,
+          },
+          {
+            id: 18,
+            title : 'Рендеринг',
+            src : `https://sun9-69.userapi.com/impg/SMF3phH9h8NCuuS953ONNTDA1XKZFmRqgw6vaw/kgVtk_-M5Ms.jpg?size=753x612&quality=96&sign=815485b7ef48fa87c16cb1f01199be2b&type=album`,
+          },
+          {
+            id: 19,
+            title : 'Подключение сторонних элементов',
+            src : `https://sun9-52.userapi.com/impg/AwY6hYcsVonGY0E139JSvx1Y0dCC3ODRzefLCg/QMnvM64WFFM.jpg?size=595x278&quality=96&sign=ae38757eec7fda9690791c764ef79f01&type=album`,
           },
         ],
       },

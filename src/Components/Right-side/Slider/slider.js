@@ -7,17 +7,28 @@ const Slider = ({ setLayoutState, slider }) => {
 
   const [sliderState, setSliderState] = useState({ slides : slider, active : 2 })
 
-  const prevSlide = () => {
+  const prevSlide = () => { // Нужно оптимизировать!
     const result = slider.pop()
     slider.unshift(result)
     setSliderState({ slides : slider, active : slider[1].id })
   }
 
-  const nextSlide = () => {
+  // const prevSlide = (state) => { // Предыдущее фото
+  //   setPhoto(state < (photos.length) && state > 1 ? state - 1 : photos.length - 1)
+  // }
+
+  const nextSlide = () => { // Нужно оптимизировать!
     const result = slider.shift()
     slider.push(result)
     setSliderState({ slides : slider, active : slider[1].id})
   }
+
+  // const nextSlide = (state) => { // Следующее фото
+  //   setPhoto(state < (photos.length - 1)  ? state + 1 : 1)
+  // }
+
+
+
 
   return (
     <>
