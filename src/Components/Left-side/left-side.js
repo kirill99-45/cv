@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faTelegram, faGithub} from '@fortawesome/free-brands-svg-icons';
+import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import './left-side.css';
 
 const LeftSide = () => {
@@ -13,7 +16,7 @@ const LeftSide = () => {
       </div>
       <div className='skills__wrapper'>
         <div className='software__wrapper'>
-          <span>SOFTWARE</span>
+          <span>HARD SKILLS</span>
           <ul>
             <li>HTML</li>
             <li>CSS</li>
@@ -25,49 +28,49 @@ const LeftSide = () => {
           <span>SOFT SKILLS</span>
           <ul>
             <li className='skill__wrapper'>
-              Team work
+              Командная работа
             </li>
             <li className='skill__wrapper'>
-              Creativy
+              Креативность
             </li>
             <li className='skill__wrapper'>
-              Managment
+              Здоровый образ жизни
             </li>
             <li className='skill__wrapper'>
-              Communication
+              Пунктуальность
             </li>
             <li className='skill__wrapper'>
-              Organization
+              Менеджмент
             </li>
             <li className='skill__wrapper'>
-              Presentation
+              Ответственность
             </li>
           </ul>
         </div>
         <div className='contacts__wrapper'>
-          <span className='contacts__title'>LET'S KEEP IN TOUCH</span>
+          <span className='contacts__title'>КОНТАКТЫ</span>
           <ul>
             <li className='contact__wrapper'>
               <div className='img__wrapper'>
-                <img src='https://cdn-icons-png.flaticon.com/512/455/455705.png' alt='icon' />
+                <FontAwesomeIcon icon={faPhone} />
               </div>
               <span><a href='tel:+89039126358' type='phone'>8-903-912-63-58</a></span>
             </li>
             <li className='contact__wrapper'>
               <div className='img__wrapper'>
-                <img src='https://cdn-icons-png.flaticon.com/512/2111/2111708.png' alt='icon' />
+                <FontAwesomeIcon icon={faTelegram} />
               </div>
               <span><a href='https://t.me/kirill99_45' target='_blank'>t.me/kirill99_45</a></span>
             </li>
             <li className='contact__wrapper'>
               <div className='img__wrapper'>
-                <img src='https://cdn-icons-png.flaticon.com/512/25/25657.png' alt='icon' />
+                <FontAwesomeIcon icon={faGithub} />
               </div>
               <span><a href='https://github.com/kirill99-45' target='_blank'>@kirill99-45</a></span>
             </li>
             <li className='contact__wrapper'>
               <div className='img__wrapper'>
-                <img src='https://cdn-icons.flaticon.com/png/512/3178/premium/3178158.png?token=exp=1660240892~hmac=6b117ecb07a3368eb8485ecd16bfb8ee' alt='icon' />
+                <FontAwesomeIcon icon={faEnvelope} />
               </div>
               <span><a href='https://vk.com/im?sel=270124671' target='_blank'>kirill99_45@mail.ru</a></span>
             </li>

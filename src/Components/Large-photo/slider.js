@@ -5,12 +5,12 @@ const Slider = ({ slides }) => {
   const [slide, setSlideState] = useState(0)
 
   const nextScreen = () => {
-    setSlideState(slide < (slides.length - 1)  ? slide + 1 : 0)
+    setSlideState( slide < (slides.length - 1)  ? slide + 1 : 0)
   }
 
   const prevScreen = () => {
-    setSlideState(slide < (slides.length) && slide > 1 ? slide - 1 : slides.length - 1)
-  }
+    setSlideState(slide < (slides.length) && slide > 1 ? slide - 1 : slides.length - 1 )
+  };
 
   useEffect(() => {
     const setSlide = (event) => {
@@ -33,12 +33,12 @@ const Slider = ({ slides }) => {
       {
         slides.map((item, index) => {
           if (index === slide) {
-            console.log(item);
             return (
               <>
                 <button type='button' className='screen__prev' onClick={nextScreen}/>
                 <div className='screen__large-wrapper'>
-                  <img src={item.src} alt='Large photo' title={item.title}/>
+                  <img src={item.src} alt='Large photo' />
+                  <span className='screen__description'>{item.title}</span>
                 </div>
                 <button type='button' className='screen__next' onClick={prevScreen}/>
               </>

@@ -9,10 +9,11 @@ const Slides = ({ sliderState, setLayoutState, setSliderState, slider }) => {
     sliderState.slides.map((item, index) => {
         return (
           <div className={ index === 1 ? 'project__photo-wrapper active' : 'project__photo-wrapper' } key={index}>
+            <span className='photo__descritpion'>{item.title}</span>
             <img
               src={item.mainSliderSrc}
               alt='Project photo'
-              title={item.title}
+              title='Подробнее'
               onClick={ index === 1 ? () => showLargePhoto(item) : () => console.log(slider) }
             />
           </div>

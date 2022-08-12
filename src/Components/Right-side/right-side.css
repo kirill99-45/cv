@@ -1,13 +1,15 @@
+@import URL()'https://kit.fontawesome.com/0f29bf93fe.js');
+
 .right-side__wrapper {
   width: 65%;
-  background: #E3E3E3;
+  background: #F0F5F9;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 .right-side__wrapper header {
   margin-top: 40px;
-  background: #233142;
+  background: #303841;
   padding: 10px;
   border-radius: 6px;
   margin-bottom: 30px;
@@ -15,17 +17,16 @@
 }
 
 .right-side__wrapper header h1 {
-  padding: 10px 0px;
   color: white;
-  letter-spacing: 5px;
+  padding: 10px 0px;
+  font-size: 26px;
 }
 
 .right-side__wrapper header p {
-  color: white;
+  color: #DDE7F2;
   font-weight: normal;
   text-align: justify;
   font-size: 14px;
-  opacity: 0.6;
 }
 
 .experience__wrapper {
@@ -38,9 +39,9 @@
   display: flex;
   align-items: center;
   column-gap: 5px;
-  margin-left: 26px;
+  margin-left: 29px;
   margin-bottom: 10px;
-  color: #233142;
+  color: #303841;
   overflow: hidden;
 }
 
@@ -59,9 +60,8 @@
 }
 
 .btn__wrapper:hover {
-  box-shadow: 0px 0px 6px #f95959;
   transition: 0.3;
-  background: #8892b02b;
+  background: #DBE2EF;
 }
 
 .btn__open-additional-info {
@@ -100,7 +100,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f95959;
+  background: #DBE2EF;
   border-radius: 50%;
   position: relative;
 }
@@ -113,18 +113,12 @@
   transform: translateY(-50%);
   width: 2px;
   height: 180px;
-  background: #f95959;
-}
-
-.experience-img__wrapper img, .education-img__wrapper img {
-  width: 20px;
-  height: 20px;
-  object-fit: cover;
+  background: #303841;
 }
 
 .job__wrapper, .education__item-wrapper {
   display: flex;
-  column-gap: 24px;
+  column-gap: 28px;
   align-items: center;
 }
 
@@ -156,7 +150,7 @@
   right: -20px;
   transform: translateY(-50%);
   border-radius: 50%;
-  background: #233142;
+  background: #303841;
 }
 
 .years__wrapper span:nth-child(1) {
@@ -170,7 +164,7 @@
   bottom: 0;
   left: 0px;
   height: 1px;
-  background: #f95959;
+  background: #303841;
 }
 
 
@@ -179,9 +173,22 @@
   flex-direction: column;
   width: 100%;
   row-gap: 7px;
-  background: #233142;
+  background: #303841;
   border-radius: 6px;
   padding: 10px;
+  position: relative;
+}
+
+.job-about__wrapper::before, .education-about__wrapper::before {
+  content: '';
+  position: absolute;
+  left: -5px;
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+  width: 10px;
+  height: 10px;
+  background: red;
+  background: #f0f5f9;
 }
 
 .job-position {
@@ -213,7 +220,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f95959;
+  background: #DBE2EF;
   border-radius: 50%;
   position: relative;
 }
@@ -226,11 +233,15 @@
   transform: translateY(-50%);
   width: 2px;
   height: 150px;
-  background: #f95959;
+  background: #112D4E;
 }
 
 .education-name {
   color: white;
+}
+
+.icon {
+  color: black;
 }
 
 /* ------ Пэт проект ----*/
@@ -261,10 +272,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #f95959;
+  background: #DBE2EF;
   margin-left: 26px;
   border-radius: 50%;
+}
 
+.pet-project {
+  position: relative;
+}
+
+.pet-project::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  background: red;
+  transform: rotate(45deg) translateX(-50%);
+  z-index: 2;
+  background: #f0f5f9;
 }
 
 .icon__wrapper img {
@@ -285,10 +312,17 @@
 }
 
 .project__description {
-  height: 100px;
+  /* height: 100px; */
   border-radius: 6px;
-  color: white;
-  background: #233142;
+  color: #DDE7F2;
+  background: #303841;
   padding: 10px;
   font-size: 14px;
+  position: relative;
+}
+
+.project__description h3 {
+  margin: 10px 0px;
+  color: white;
+  font-size: 24px;
 }

@@ -1,5 +1,7 @@
 const Dotts = ({ sliderState }) => {
 
+  console.log(sliderState);
+
   return (
     sliderState.slides.map((item, index) => {
       return (

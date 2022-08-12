@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import Slides from './slides.js';
 import Dotts from './dotts.js';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import './slider.css';
 
 const Slider = ({ setLayoutState, slider }) => {
@@ -33,13 +35,13 @@ const Slider = ({ setLayoutState, slider }) => {
   return (
     <>
       <div className='project__photo-container'>
-        <div className='prev-slide'onClick={prevSlide}/>
+        <FontAwesomeIcon icon={faAngleLeft} className='prev-slide'onClick={prevSlide}/>
         <Slides
           sliderState={sliderState}
           setLayoutState={setLayoutState}
           slider={slider}
           setSliderState={setSliderState}/>
-        <div className='next-slide' onClick={nextSlide}/>
+        <FontAwesomeIcon icon={faAngleRight} className='next-slide' onClick={nextSlide}/>
       </div>
       <ul className='photo__nav-container'>
         <Dotts sliderState={sliderState}/>
