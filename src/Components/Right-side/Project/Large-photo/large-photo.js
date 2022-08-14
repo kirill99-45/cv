@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import Slider from './slider.js';
-import Dotts from './../Right-side/Slider/dotts.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faListCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
 import './large-photo.css';
@@ -9,18 +8,34 @@ const LargePhoto = ({ layoutState, setLayoutState }) => {
 
   const body = document.querySelector('body')
 
+  const [slide, setSlideState] = useState(0)
+
+  const nextScreen = () => {
+    setSlideState( slide < (layoutState.data.length - 1)  ? slide + 1 : 0)
+  }
+
+  const prevScreen = () => {
+    setSlideState(slide < (layoutState.data.length) && slide > 1 ? slide - 1 : layoutState.data.length - 1 )
+  };
 
   useEffect(() => {
     const setSlide = (event) => {
-      if (event.key === 'Escape') {
+      if (event.key === 'ArrowLeft') {
+        prevScreen()
+      } else if (event.key === 'ArrowRight') {
+        nextScreen()
+      } else if (event.key === 'Escape') {
         setLayoutState({ className : 'layout-hidden' })
+        setSlideState(0)
         body.style.position = 'static'
       }
     }
 
     window.addEventListener('keydown', setSlide)
 
-    return () => window.removeEventListener('keydown', setSlide)
+    return () => {
+      window.removeEventListener('keydown', setSlide)
+    }
   })
 
   if (layoutState.data) {
@@ -31,9 +46,9 @@ const LargePhoto = ({ layoutState, setLayoutState }) => {
         <div className='large-photo__wrapper'>
           <div className='large-photo__screen-wrapper'>
             <h3>{layoutState.title}</h3>
-            <Slider
-              slides={layoutState.data}
-            />
+            <button type='button' className='screen__prev' onClick={prevScreen}/>
+            <Slider slides={layoutState.data} slide={slide}/>
+            <button type='button' className='screen__next' onClick={nextScreen}/>
           </div>
           <div className='large-photo__descritpion-wrapper'>
             <ul className='large-photo__descritpion-activity'>

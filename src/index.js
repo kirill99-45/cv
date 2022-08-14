@@ -10,7 +10,10 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 const rerenderEntireTree = () => {
   root.render(
       <React.StrictMode>
-        <App slider={Store.state.slider}/>
+        <App
+          leftSide={Store.state.leftSide}
+          rightSide={Store.state.rightSide}
+        />
       </React.StrictMode>
   );
 }
