@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import Skills from './Skills/skills-wrapper.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAnglesRight, faAnglesLeft, faAnglesDown, faAnglesUp } from '@fortawesome/free-solid-svg-icons'
-import './left-side.css';
+import './css/left-side.css';
+import './css/media.css';
 
 const LeftSide = ({ moreInfoState, setMoreInfoState, leftSide }) => {
 

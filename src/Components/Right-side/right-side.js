@@ -3,6 +3,7 @@ import Job from './Jobs/job-wrapper.js';
 import Education from './Education/education.js';
 import Project from './Project/project-wrapper.js';
 import './css/right-side.css';
+import './media.css';
 
 const RightSide = ({ moreInfoState, rightSide }) => {
 

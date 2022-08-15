@@ -361,35 +361,3 @@
   color: white;
   font-size: 24px;
 }
-
-@media (maxn-width: 690px) {
-  .experience-img__wrapper::after {
-    height: 290px;
-    bottom: -440px;
-  }
-  .experience__title {
-    margin-left: 27px;
-  }
-  .education__title {
-    margin-left: 30px;
-  }
-}
-
-@media (max-width: 490px) {
-    .visible  {
-    width: 100vw;
-  }
-}
-
-@media (max-width: 424px) {
-  .experience-img__wrapper::after {
-    height: 230px;
-    bottom: -350px;
-  }
-}
-
-@media (max-width: 580px) {
-  .btn__wrapper {
-    flex-direction: column;
-  }
-}
