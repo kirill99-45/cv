@@ -1,10 +1,7 @@
-@import URL()'https://kit.fontawesome.com/0f29bf93fe.js');
-
 .right-side__wrapper {
   background: #F0F5F9;
   padding-left: 20px;
   padding-right: 20px;
-  width: 65vw;
 }
 
 .visible {
@@ -20,6 +17,8 @@
   width: 0;
   height: 0;
   opacity: 0;
+  padding-left: 0px;
+  padding-right: 0px;
   visibility: hidden;
   transition: 0.5s, visibility 0s 0.5s;
 }
@@ -361,4 +360,36 @@
   margin: 10px 0px;
   color: white;
   font-size: 24px;
+}
+
+@media (maxn-width: 690px) {
+  .experience-img__wrapper::after {
+    height: 290px;
+    bottom: -440px;
+  }
+  .experience__title {
+    margin-left: 27px;
+  }
+  .education__title {
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 490px) {
+    .visible  {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 424px) {
+  .experience-img__wrapper::after {
+    height: 230px;
+    bottom: -350px;
+  }
+}
+
+@media (max-width: 580px) {
+  .btn__wrapper {
+    flex-direction: column;
+  }
 }

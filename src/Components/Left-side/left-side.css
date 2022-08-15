@@ -98,41 +98,20 @@
   position: relative;
   opacity: 0.8;
   white-space: nowrap;
-  animation-delay: 3s;
-}
-
-.photo__info-wrapper span:nth-child(2)::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  right: -65px;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 1px;
-  background: #3e3a41;
-}
-
-
-.photo__info-wrapper span:nth-child(2)::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: -25px;
-  transform: translateX(-50%);
-  width: 40px;
-  height: 1px;
-  background: #3e3a41;
 }
 
 /* -----------Общий блок навыков------------- */
 
 .skills__wrapper {
-  padding-left: 20px;
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  margin: 0px auto;
+  padding-bottom: 20px;
+  width: 90%;
 }
 
 .skill__wrapper {
-  margin: 20px 0px;
   display: flex;
   flex-direction: column;
 }
@@ -140,8 +119,6 @@
 .center {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 /* -----------Софт скиллс------------ */
@@ -205,4 +182,110 @@
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+}
+
+@media (max-width: 980px) {
+  .photo__info-wrapper span:nth-child(1) {
+    font-size: 22px;
+    letter-spacing: 4px;
+  }
+  .photo__info-wrapper span:nth-child(2) {
+    font-size: 14px;
+  }
+}
+
+
+@media (max-width: 790px) {
+  .photo__info-wrapper span:nth-child(1) {
+    font-size: 18px;
+    letter-spacing: 4px;
+  }
+  .photo__info-wrapper span:nth-child(2) {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 611px) {
+  .photo__info-wrapper span:nth-child(1) {
+    font-size: 16px;
+    letter-spacing: 4px;
+  }
+  .photo__info-wrapper span:nth-child(2) {
+    font-size: 11px;
+  }
+  .photo__wrapper {
+    height: 50vh;
+  }
+  .skill {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+  .skill__container li {
+    font-size: 12px;
+  }
+  .contacts span a {
+    font-size: 12px;
+    padding: 7px 10px;
+  }
+  .photo__info-wrapper {
+    width: 90%;
+    height: 30%;
+  }
+}
+
+@media (max-width: 560px) {
+  .photo__info-wrapper span:nth-child(1) {
+    font-size: 14px;
+  }
+  .photo__info-wrapper span:nth-child(2) {
+    font-size: 10px;
+  }
+  .photo__info-wrapper {
+    height: 20%;
+  }
+}
+
+@media (max-width: 490px) {
+  .left-side__wrapper {
+    width: 100%;
+  }
+  .photo__wrapper {
+    height: 60vh;
+  }
+  .photo__info-wrapper span:nth-child(1) {
+    font-size: 24px;
+  }
+  .photo__info-wrapper span:nth-child(2) {
+    font-size: 16px;
+  }
+}
+
+
+
+@media (max-width: 324px) {
+  .skill__wrapper {
+    align-items: center;
+  }
+  .skill__container {
+    justify-content: center;
+  }
+  .photo__info-wrapper {
+    width: 90%;
+    height: 20%;
+  }
+  .photo__info-wrapper span:nth-child(1) {
+    font-size: 20px;
+  }
+  .photo__info-wrapper span:nth-child(2) {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 280px) {
+  .photo__info-wrapper span:nth-child(1) {
+    font-size: 16px;
+  }
+  .photo__info-wrapper span:nth-child(2) {
+    font-size: 12px;
+  }
 }

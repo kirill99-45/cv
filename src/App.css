@@ -1,6 +1,11 @@
 main {
-  display: flex;
   justify-content: center;
   overflow: hidden;
   display: flex;
+}
+
+@media (max-width: 490px) {
+  main {
+    flex-direction: column;
+  }
 }

@@ -62,8 +62,8 @@
 }
 
 .project__photo-wrapper {
-  width: 200px;
-  height: 150px;
+  width: 25%;
+  height: 90%;
   opacity: 0.6;
   transition: 0.5s;
   cursor: pointer;

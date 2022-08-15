@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Job from './Jobs/job-wrapper.js';
 import Education from './Education/education.js';
 import Project from './Project/project-wrapper.js';
-import './right-side.css';
+import './css/right-side.css';
 
 const RightSide = ({ moreInfoState, rightSide }) => {
 
