@@ -9,7 +9,7 @@ const Store =
     leftSide :
     {
       name : 'Кирилл Рогов',
-      position : 'Junior Frontend Developer',
+      position : 'Frontend Developer',
       photo : `https://sun9-77.userapi.com/impg/-tnWD1FWTlCKXtAYBVDGFu-AV9YjhCUPOlYeKQ/ZpvKZ2fHeFU.jpg?size=625x854&quality=96&sign=55d170c4adda9a770215f624add7b89c&type=album0`,
       skills :
       {

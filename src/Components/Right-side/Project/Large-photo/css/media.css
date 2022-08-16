@@ -27,10 +27,12 @@
 
   .large-photo__wrapper {
     padding: 0;
+    background: #1f1f1f;
   }
 
   .large-photo__screen-wrapper {
-    width: 100%
+    width: 100%;
+    overflow: hidden;
   }
 
   .large-photo__screen-header {
@@ -52,8 +54,8 @@
     top: 0;
     bottom: 0;
     padding: 5px;
-    background: #dbe2ef;
-    color: #303841;
+    /* background: #dbe2ef; */
+    color: #dbe2ef;
     border-radius: 6px;
     z-index: 5;
   }
@@ -69,8 +71,7 @@
     top: 0;
     bottom: 0;
     padding: 5px;
-    background: #dbe2ef;
-    color: #303841;
+    color: #dbe2ef;
     border-radius: 6px;
     z-index: 5;
   }
@@ -96,6 +97,8 @@
     border-radius: 6px;
     box-shadow: -13px 0px 6px #1f1f1f3b;
     transition: 0.5s;
+    overflow-x: hidden;
+    overflow-y: scroll;
   }
 
   .large-photo__descritpion-wrapper__hidden {
@@ -109,6 +112,11 @@
     width: 0%;
     border-radius: 6px;
     transition: 0.5s;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+  .large-photo__activity-description-icon__wrapper {
+    margin-left: 10px;
   }
 }
 

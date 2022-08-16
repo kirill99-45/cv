@@ -145,6 +145,7 @@
   transition: 0.3s;
   opacity: 1;
   visibility: visible;
+  text-align: justify;
 }
 
 .jobs__wrapper-hidden, .educations__wrapper-hidden {
@@ -285,6 +286,7 @@
   flex-direction: column;
   row-gap: 10px;
   margin-bottom: 10px;
+  text-align: justify;
 }
 
 .project__title-wrapper {
