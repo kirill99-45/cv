@@ -4,7 +4,7 @@ import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 
 const Skills = ({ skills, contacts }) => {
 
-  const Skill = ({ skills }) => skills.map(skill => <li className='skill'>{skill}</li>)
+  const Skill = ({ skills }) => skills.map((skill, i) => <li className='skill' key={i}>{skill}</li>)
 
   return (
     <div className='skills__wrapper'>

@@ -7,7 +7,7 @@ const Slider = ({ slides, slide }) => {
           if (index === slide) {
             return (
               <>
-              <div className='screen__large-wrapper'>
+              <div className='screen__large-wrapper' key={index}>
                 <img src={item.src} alt='Large photo' />
                 <span className='screen__description'>{item.title}</span>
               </div>

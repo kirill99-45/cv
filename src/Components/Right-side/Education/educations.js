@@ -1,8 +1,8 @@
 const Educations = ({ educations }) => {
 
-  return educations.map(education => {
+  return educations.map((education, i) => {
     return (
-      <li className='education__item-wrapper'>
+      <li className='education__item-wrapper' key={i}>
         <div className='years__wrapper' title={education.yearsTitle}>
           <span>{education.years[0]}</span>
           <span>{education.years[1]}</span>

@@ -1,7 +1,7 @@
 const Jobs = ({ jobs }) => {
-    return jobs.map(job => {
+    return jobs.map((job, i) => {
       return (
-        <li className='job__wrapper'>
+        <li className='job__wrapper' key={i}>
           <div className='years__wrapper' title={job.yearsTitle}>
             <span>{job.years[0]}</span>
             <span>{job.years[1]}</span>

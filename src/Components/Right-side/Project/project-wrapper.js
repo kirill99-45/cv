@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Slider from './Slider/slider.js';
 import LargePhoto from './Large-photo/large-photo.js'
 
-const Project = ({ homeProject }) => {
+const Project = ({ homeProject, setAboutRef }) => {
 
   const [layoutState, setLayoutState] = useState({ className : 'layout-hidden', data : null })
 

@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const Education = ({ educations }) => {
 
-  const [educationState, setEducationState] = useState
+  const [educationState, setEducationState] = useState // Состояние раздела опыт работы
   (
     {
       educations__wrapper : 'educations__wrapper-hidden',
@@ -15,7 +15,7 @@ const Education = ({ educations }) => {
     }
   )
 
-  const getEducation = () => {
+  const getEducation = () => { // Управление состоянием
     if (educationState.educations__wrapper === 'educations__wrapper-visible') {
       setEducationState
       (

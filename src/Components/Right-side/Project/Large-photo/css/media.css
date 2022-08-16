@@ -1,0 +1,148 @@
+@media (max-width: 780px) {
+  .screen__prev {
+    width: 30px;
+    height: 40px;
+    left: 0;
+  }
+  .screen__next {
+    width: 30px;
+    height: 40px;
+    right: 0;
+  }
+}
+
+@media (max-width: 743px) {
+  .large-photo__screen-header {
+    justify-content: center;
+  }
+  .large-photo__screen-header h3 {
+    width: 60%;
+  }
+}
+
+@media (max-width: 640px) {
+  .layout-visible {
+    background: #000000d6;
+  }
+
+  .large-photo__wrapper {
+    padding: 0;
+  }
+
+  .large-photo__screen-wrapper {
+    width: 100%
+  }
+
+  .large-photo__screen-header {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .large-photo__screen-header h3  {
+    width: 60%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  .large-photo__burger {
+    display: block;
+    position: absolute;
+    left: 5px;
+    top: 0;
+    bottom: 0;
+    padding: 5px;
+    background: #dbe2ef;
+    color: #303841;
+    border-radius: 6px;
+    z-index: 5;
+  }
+
+  .close {
+    display: none;
+  }
+
+  .phone__close {
+    display: block;
+    position: absolute;
+    left: 40px;
+    top: 0;
+    bottom: 0;
+    padding: 5px;
+    background: #dbe2ef;
+    color: #303841;
+    border-radius: 6px;
+    z-index: 5;
+  }
+
+  .screen__prev {
+    width: 50px;
+    height: 60px;
+  }
+  .screen__next {
+    width: 50px;
+    height: 60px;
+  }
+
+  .large-photo__descritpion-wrapper__open {
+    position: absolute;
+    display: flex;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: #f0f5f9;
+    width: 70%;
+    border-radius: 6px;
+    box-shadow: -13px 0px 6px #1f1f1f3b;
+    transition: 0.5s;
+  }
+
+  .large-photo__descritpion-wrapper__hidden {
+    position: absolute;
+    display: flex;
+    top: 10px;
+    bottom: 10px;
+    right: -300px;
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    width: 0%;
+    border-radius: 6px;
+    transition: 0.5s;
+  }
+}
+
+@media (max-width: 453px) {
+  .screen__prev {
+    width: 30px;
+    height: 40px;
+    color: black;
+  }
+  .screen__next {
+    width: 30px;
+    height: 40px;
+    color: black;
+  }
+}
+
+@media (max-width: 380px) {
+  .large-photo__screen-header h3  {
+    width: 50%;
+    font-size: 14px;
+  }
+  .large-photo__burger {
+    padding: 3px;
+  }
+
+  .phone__close {
+    padding: 3px;
+    left: 35px;
+  }
+}
+
+@media (max-width: 270px) {
+  .large-photo__screen-header {
+    justify-content: end;
+    padding-right: 10px;
+  }
+}

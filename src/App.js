@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import RightSide from './Components/Right-side/right-side.js'
 import LeftSide from './Components/Left-side/left-side.js'
 import './App.css';
@@ -7,9 +7,7 @@ const App = ({ leftSide, rightSide }) => {
 
   const [moreInfoState, setMoreInfoState] = useState('right-side__wrapper hidden')
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [])
+  const [aboutRef, setAboutRef] = useState(null)
 
   return (
     <main>
@@ -17,10 +15,12 @@ const App = ({ leftSide, rightSide }) => {
         leftSide={leftSide}
         moreInfoState={moreInfoState}
         setMoreInfoState={setMoreInfoState}
+        aboutRef={aboutRef}
       />
       <RightSide
         rightSide={rightSide}
         moreInfoState={moreInfoState}
+        setAboutRef={setAboutRef}
       />
     </main>
   )

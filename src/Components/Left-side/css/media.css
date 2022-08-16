@@ -62,6 +62,10 @@
   .left-side__wrapper {
     width: 100%;
   }
+  .left-side__btn {
+    position: fixed;
+    background: #dbe2ef;
+  }
   .photo__wrapper {
     height: 60vh;
   }

@@ -23,14 +23,12 @@
   transition: 0.5s, visibility 0s 0.5s;
 }
 
-
 .right-side__wrapper header {
   margin-top: 40px;
   background: #303841;
   padding: 10px;
   border-radius: 6px;
   margin-bottom: 30px;
-
 }
 
 .right-side__wrapper header h1 {

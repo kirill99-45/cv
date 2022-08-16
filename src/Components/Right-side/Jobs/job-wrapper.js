@@ -5,7 +5,7 @@ import Jobs from './jobs.js';
 
 const Job = ({ jobs }) => {
 
-  const [jobState, setJobState] = useState
+  const [jobState, setJobState] = useState // Состояние раздела опыт работы
   (
     {
       jobs__wrapper : 'jobs__wrapper-hidden',
@@ -15,7 +15,7 @@ const Job = ({ jobs }) => {
     }
   )
 
-  const getJob = () => {
+  const getJob = () => { // Управление состоянием
     if (jobState.jobs__wrapper === 'jobs__wrapper-visible') {
       setJobState
       (

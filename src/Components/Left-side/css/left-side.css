@@ -129,6 +129,7 @@
   font-weight: bold;
   font-size: 18px;
   color: white;
+  z-index: 1;
 }
 
 .skill__container {

@@ -1,14 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Job from './Jobs/job-wrapper.js';
 import Education from './Education/education.js';
 import Project from './Project/project-wrapper.js';
 import './css/right-side.css';
 import './css/media.css';
 
-const RightSide = ({ moreInfoState, rightSide }) => {
+const RightSide = ({ moreInfoState, rightSide, setAboutRef }) => {
+
+  const aboutRef = useRef() // Ссылка для скролла вверх (!) только для мобильных устройств
+
+  useEffect(() => { // Ссылку определяем при первичном отрисовке компонента
+    setAboutRef(aboutRef)
+  }, [])
 
   return (
-    <div className={moreInfoState}>
+    <div className={moreInfoState} ref={aboutRef}>
       <header>
         <h1>Кто я?</h1>
         <p>
@@ -23,6 +29,7 @@ const RightSide = ({ moreInfoState, rightSide }) => {
       />
       <Project
         homeProject={rightSide.homeProject}
+        setAboutRef={setAboutRef}
       />
     </div>
   )

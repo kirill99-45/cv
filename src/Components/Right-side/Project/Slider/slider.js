@@ -10,28 +10,32 @@ const Slider = ({ setLayoutState, slider }) => {
 
   const { active, slides } = sliderState
 
-  const prevSlide = () => {
-    setSliderState({ slides, active : active < slides.length && active > 0 ? active - 1 : slides.length - 1  })
-  }
-
-  const nextSlide = () => {
-    setSliderState({ slides, active : active < slides.length - 1 ? active + 1 : 0 })
-  }
-
   return (
     <>
       <div className='project__photo-container'>
-        <FontAwesomeIcon icon={faAngleLeft} className='prev-slide' onClick={prevSlide}/>
+        <button
+          type='button'
+          className='project__prev-slide-layout'
+          onClick={() => setSliderState({ slides, active : active < slides.length && active > 0 ? active - 1 : slides.length - 1  })}
+        >
+          <FontAwesomeIcon icon={faAngleLeft} className='prev-slide'/>
+        </button>
         <Slides
           sliderState={sliderState}
           setLayoutState={setLayoutState}
           slider={slider}
           setSliderState={setSliderState}
         />
-        <FontAwesomeIcon icon={faAngleRight} className='next-slide' onClick={nextSlide}/>
+          <button
+            type='button'
+            className='project__next-slide-layout'
+            onClick={() => setSliderState({ slides, active : active < slides.length - 1 ? active + 1 : 0 })}
+          >
+          <FontAwesomeIcon icon={faAngleRight} className='next-slide'/>
+        </button>
       </div>
       <ul className='photo__nav-container'>
-        { sliderState.slides.map((item, i) => <li className={i === sliderState.active ? 'dot active' : 'dot'} />) }
+        { sliderState.slides.map((item, i) => <li className={i === sliderState.active ? 'dot active' : 'dot'} key={i}/>) }
       </ul>
     </>
   )
