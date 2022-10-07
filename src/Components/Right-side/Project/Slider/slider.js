@@ -7,7 +7,6 @@ import './slider.css';
 const Slider = ({ setLayoutState, slider }) => {
 
   const [sliderState, setSliderState] = useState({ slides : slider, active : 1 })
-
   const { active, slides } = sliderState
 
   return (

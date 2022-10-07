@@ -5,6 +5,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .left-side__wrapper::before {
@@ -32,6 +33,14 @@
   background: #f0f5f9;
   border-radius: 6px;
   transition: 0.3s;
+}
+
+.left-side__btn:active {
+  transform: scale(95%);
+}
+
+.left-side__btn:hover {
+  background: #bcc0c3;
 }
 
 .left-side__wrapper::after {
@@ -162,17 +171,26 @@
   justify-content: center;
   align-items: center;
   border-radius: 6px;
-  padding: 2px;
+  padding: 3px;
   background: #f0f5f9;
 }
 
-.contacts li {
+.contacts {
   display: flex;
-  column-gap: 4px;
-  background: inherit;
+  row-gap: 10px;
 }
 
-.contacts span a {
+.contacts li a {
+  display: flex;
+  column-gap: 4px;
+  background: #303841;
+  flex-direction: row;
+  column-gap: 10px;
+  border-radius: 6px;
+  align-items: center;
+}
+
+.contacts__title {
   padding: 7px 20px;
   display: flex;
   border-radius: 6px;
@@ -183,4 +201,25 @@
   text-decoration: none;
   font-weight: bold;
   cursor: pointer;
+}
+
+.contacts__btn {
+  color: #303841;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contacts__btn:focus .contacts__title {
+  box-shadow: 0px 0px 8px 2px #3F51B5;
+  border: none;
+  outline: none;
+}
+
+.contacts__btn:active .contacts__title {
+  scale: 95%;
+  transition: 0.2s;
+}
+
+.contacts__btn:hover .contacts__title {
+  box-shadow: 0px 0px 8px 2px #3F51B5;
 }

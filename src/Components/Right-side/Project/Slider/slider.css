@@ -69,6 +69,16 @@
   cursor: pointer;
 }
 
+.prev-slide:active, .next-slide:active {
+  width: 25px;
+  height: 35px;
+  opacity: 1;
+}
+
+.prev-slide:focus, .next-slide:focus {
+  opacity: 1;
+}
+
 .next-slide {
   transform:  translateY(-50%);
   right: 0;
