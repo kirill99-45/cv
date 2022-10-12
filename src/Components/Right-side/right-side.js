@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
-import Job from './Jobs/job-wrapper.js';
-import Education from './Education/education.js';
-import Project from './Project/project-wrapper.js';
+import { JobWrapper } from './Jobs/job-wrapper.js';
+import { EducationWrapper } from './Education/education.js';
+import { ProjectWrapper } from './Project/project-wrapper.js';
 import './css/right-side.css';
 import './css/media.css';
 
-const RightSide = ({ moreInfoState, rightSide, setAboutRef }) => {
+export const RightSide = ({ moreInfoState, rightSide, setAboutRef }) => {
 
   const aboutRef = useRef() // Ссылка для скролла вверх (!) только для мобильных устройств
 
@@ -21,18 +21,16 @@ const RightSide = ({ moreInfoState, rightSide, setAboutRef }) => {
           { rightSide.about }
         </p>
       </header>
-      <Job
+      <JobWrapper
         jobs={rightSide.jobs}
       />
-      <Education
+      <EducationWrapper
         educations={rightSide.education}
       />
-      <Project
+      <ProjectWrapper
         homeProject={rightSide.homeProject}
         setAboutRef={setAboutRef}
       />
     </div>
   )
 }
-
-export default RightSide;

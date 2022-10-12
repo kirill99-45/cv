@@ -1,40 +1,32 @@
 import { useState } from 'react';
 import { faAngleDown, faBriefcase  } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Jobs from './jobs.js';
+import { Jobs } from './jobs.js';
 
-const Job = ({ jobs }) => {
+export const JobWrapper = ({ jobs }) => {
 
-  const [jobState, setJobState] = useState // Состояние раздела опыт работы
-  (
-    {
-      jobs__wrapper : 'jobs__wrapper-hidden',
-      img :  'btn__icon-passive',
-      experience__title : 'overflow: hidden',
-      btnTitle : 'Подробнее'
-    }
-  )
+  const [jobState, setJobState] = useState({
+    jobs__wrapper : 'jobs__wrapper-hidden',
+    img :  'btn__icon-passive',
+    experience__title : 'overflow: hidden',
+    btnTitle : 'Подробнее'
+  })
 
   const getJob = () => { // Управление состоянием
     if (jobState.jobs__wrapper === 'jobs__wrapper-visible') {
-      setJobState
-      (
-        {
-          jobs__wrapper : 'jobs__wrapper-hidden',
-          img : 'btn__icon-passive',
-          experience__title : 'hidden',
-          btnTitle : 'Подробнее'
-        }
-      )
+      setJobState({
+        jobs__wrapper : 'jobs__wrapper-hidden',
+        img : 'btn__icon-passive',
+        experience__title : 'hidden',
+        btnTitle : 'Подробнее'
+      })
     } else {
-      setJobState(
-        {
-          jobs__wrapper : 'jobs__wrapper-visible',
-          img : 'btn__icon-active',
-          experience__title : 'visible',
-          btnTitle : 'Скрыть'
-        }
-      )
+      setJobState({
+        jobs__wrapper : 'jobs__wrapper-visible',
+        img : 'btn__icon-active',
+        experience__title : 'visible',
+        btnTitle : 'Скрыть'
+      })
     }
   }
 
@@ -56,5 +48,3 @@ const Job = ({ jobs }) => {
     </div>
   )
 }
-
-export default Job;

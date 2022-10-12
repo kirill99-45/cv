@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import Slides from './slides.js';
+import { Slides } from './slides.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import './slider.css';
 
-const Slider = ({ setLayoutState, slider }) => {
+export const Slider = ({ setLayoutState, slider }) => {
 
   const [sliderState, setSliderState] = useState({ slides : slider, active : 1 })
   const { active, slides } = sliderState
@@ -39,5 +39,3 @@ const Slider = ({ setLayoutState, slider }) => {
     </>
   )
 }
-
-export default Slider;

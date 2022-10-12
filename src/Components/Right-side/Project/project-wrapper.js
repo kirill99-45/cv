@@ -1,10 +1,10 @@
 import { useState } from 'react';
 import { faGears, faHouseUser } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Slider from './Slider/slider.js';
-import LargePhoto from './Large-photo/large-photo.js'
+import { Slider } from './Slider/slider.js';
+import { LargePhoto } from './Large-photo/large-photo.js'
 
-const Project = ({ homeProject, setAboutRef }) => {
+export const ProjectWrapper = ({ homeProject, setAboutRef }) => {
 
   const [layoutState, setLayoutState] = useState({ className : 'layout-hidden', data : null })
 
@@ -34,5 +34,3 @@ const Project = ({ homeProject, setAboutRef }) => {
     </div>
   )
 }
-
-export default Project;

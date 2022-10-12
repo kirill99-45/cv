@@ -5,7 +5,7 @@ import { faAnglesRight, faAnglesLeft, faAnglesDown, faAnglesUp, faEllipsis } fro
 import './css/left-side.css';
 import './css/media.css';
 
-const LeftSide = ({ moreInfoState, setMoreInfoState, leftSide, aboutRef }) => {
+export const LeftSide = ({ moreInfoState, setMoreInfoState, leftSide, aboutRef }) => {
 
   const [arrowIcon, setArrowIcon] = useState(faEllipsis)
 
@@ -62,5 +62,3 @@ const LeftSide = ({ moreInfoState, setMoreInfoState, leftSide, aboutRef }) => {
     </div>
   )
 }
-
-export default LeftSide;

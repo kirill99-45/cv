@@ -1,4 +1,4 @@
-const Slider = ({ slides, slide }) => {
+export const Slider = ({ slides, slide }) => {
 
   return (
     <div className='screens__container'>
@@ -20,5 +20,3 @@ const Slider = ({ slides, slide }) => {
     </div>
   )
 }
-
-export default Slider;

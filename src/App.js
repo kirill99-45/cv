@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import RightSide from './Components/Right-side/right-side.js'
-import LeftSide from './Components/Left-side/left-side.js'
+import { RightSide } from './Components/Right-side/right-side.js'
+import { LeftSide } from './Components/Left-side/left-side.js'
 import './App.css';
 
 const App = ({ leftSide, rightSide }) => {

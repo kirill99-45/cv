@@ -1,4 +1,4 @@
-const Educations = ({ educations }) => {
+export const Education = ({ educations }) => {
 
   return educations.map((education, i) => {
     return (
@@ -15,5 +15,3 @@ const Educations = ({ educations }) => {
     )
   })
 }
-
-export default Educations;

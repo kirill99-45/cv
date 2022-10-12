@@ -1,4 +1,4 @@
-const Slides = ({ sliderState, setLayoutState, setSliderState, slider }) => {
+export const Slides = ({ sliderState, setLayoutState, setSliderState, slider }) => {
 
   const showLargePhoto = (item) => {
     setLayoutState({ className : 'layout-visible', data : item.slidesContainer, description : item.description, title : item.title });
@@ -21,5 +21,3 @@ const Slides = ({ sliderState, setLayoutState, setSliderState, slider }) => {
     })
   )
 }
-
-export default Slides;

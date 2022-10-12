@@ -1,41 +1,32 @@
 import { useState } from 'react';
-import Educations from './educations.js';
+import { Education } from './educations.js';
 import { faAngleDown, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Education = ({ educations }) => {
+export const EducationWrapper = ({ educations }) => {
 
-  const [educationState, setEducationState] = useState // Состояние раздела опыт работы
-  (
-    {
-      educations__wrapper : 'educations__wrapper-hidden',
-      img :  'btn__icon-passive',
-      education__title : 'hidden',
-      btnTitle : 'Подробнее'
-    }
-  )
+  const [educationState, setEducationState] = useState({
+    educations__wrapper : 'educations__wrapper-hidden',
+    img :  'btn__icon-passive',
+    education__title : 'hidden',
+    btnTitle : 'Подробнее',
+  })
 
   const getEducation = () => { // Управление состоянием
     if (educationState.educations__wrapper === 'educations__wrapper-visible') {
-      setEducationState
-      (
-        {
-          educations__wrapper : 'educations__wrapper-hidden',
-          img : 'btn__icon-passive',
-          education__title : 'hidden',
-          btnTitle : 'Подробнее'
-        }
-      )
+      setEducationState({
+        educations__wrapper : 'educations__wrapper-hidden',
+        img : 'btn__icon-passive',
+        education__title : 'hidden',
+        btnTitle : 'Подробнее',
+      })
     } else {
-      setEducationState
-      (
-        {
-          educations__wrapper : 'educations__wrapper-visible',
-          img : 'btn__icon-active',
-          education__title : 'visible',
-          btnTitle : 'Скрыть'
-        }
-      )
+      setEducationState({
+        educations__wrapper : 'educations__wrapper-visible',
+        img : 'btn__icon-active',
+        education__title : 'visible',
+        btnTitle : 'Скрыть'
+      })
     }
   }
 
@@ -52,10 +43,8 @@ const Education = ({ educations }) => {
           </div>
         </div>
       <ul className={educationState.educations__wrapper}>
-        <Educations educations={educations}/>
+        <Education educations={educations}/>
       </ul>
     </div>
   )
 }
-
-export default Education;

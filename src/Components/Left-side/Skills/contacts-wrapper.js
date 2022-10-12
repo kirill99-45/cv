@@ -14,28 +14,26 @@ export const Contacts = ({ contacts }) => {
     }
   }
 
-  const Contact = ({ contact }) => {
-    return (
-      <li>
-        <a
-          href={contact.link}
-          type={contact.type}
-          target={contact.target}
-          className='contacts__btn'
-        >
-        <FontAwesomeIcon icon={getIcon(contact.icon)} className='img__wrapper'/>
-        <span className='contacts__title'>{contact.title}</span>
-        </a>
-      </li>
-    )
-  }
-
   return (
     <div className='skill__wrapper'>
       <span className='skill__title'>КОНТАКТЫ</span>
       <ul className='skill__container contacts'>
         {
-          contacts.map(contact => <Contact contact={contact}/>)
+          contacts.map(contact => {
+            return (
+              <li>
+                <a
+                  href={contact.link}
+                  type={contact.type}
+                  target={contact.target}
+                  className='contacts__btn'
+                >
+                <FontAwesomeIcon icon={getIcon(contact.icon)} className='img__wrapper'/>
+                <span className='contacts__title'>{contact.title}</span>
+                </a>
+              </li>
+            )
+          })
         }
       </ul>
     </div>

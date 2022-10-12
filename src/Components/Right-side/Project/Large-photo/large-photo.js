@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
-import Slider from './slider.js';
+import { Slider } from './slider.js';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faListCheck, faXmark, faBars, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons'
 import './css/large-photo.css';
 import './css/media.css';
 
-const LargePhoto = ({ layoutState, setLayoutState }) => {
+export const LargePhoto = ({ layoutState, setLayoutState }) => {
 
   const [descriptionState, setDescriptionState] = useState('') // Состояние описания
 
@@ -76,6 +76,12 @@ const LargePhoto = ({ layoutState, setLayoutState }) => {
     }
   })
 
+  const closeSlide = () => {
+    setLayoutState({ className : 'layout-hidden' })
+    setSlideState(0)
+    body.style.position = 'static'
+  }
+
   if (layoutState.data) { // Компонент добавляется на страницу только при условии, если там есть данные,
                          //которые приходят туда после клика по нужной картинке в основном слайдере
     body.style.position = 'fixed' // Фиксация страницы под слайдером
@@ -85,7 +91,7 @@ const LargePhoto = ({ layoutState, setLayoutState }) => {
           <div className='large-photo__screen-wrapper'>
             <div className='large-photo__screen-header'>
               <FontAwesomeIcon icon={faBars} className='large-photo__burger' size='lg' onClick={showMoreInfo}/>
-              <FontAwesomeIcon icon={faXmark} className='phone__close' size='lg' onClick={() => {setLayoutState({ className : 'layout-hidden' }); body.style.position = 'static'}}/>
+              <FontAwesomeIcon icon={faXmark} className='phone__close' size='lg' onClick={closeSlide}/>
               <h3>{layoutState.title}</h3>
             </div>
             <button type='button' onClick={() => setSlideState(slide < (layoutState.data.length) && slide > 1 ? slide - 1 : layoutState.data.length - 1 )} className='screen__prev-layout'>
@@ -101,7 +107,7 @@ const LargePhoto = ({ layoutState, setLayoutState }) => {
               <div className='large-photo__activity-description__wrapper'>
                 <div className='large-photo__activity-description-icon__wrapper'>
                   <FontAwesomeIcon icon={faListCheck} />
-                  <FontAwesomeIcon icon={faXmark} className='close' size='lg' onClick={() => {setLayoutState({ className : 'layout-hidden' }); body.style.position = 'static'}}/>
+                  <FontAwesomeIcon icon={faXmark} className='close' size='lg' onClick={closeSlide}/>
                 </div>
                 <h3>ОПИСАНИЕ</h3>
               </div>
@@ -122,5 +128,3 @@ const LargePhoto = ({ layoutState, setLayoutState }) => {
     )
   }
 }
-
-export default LargePhoto;
