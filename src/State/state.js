@@ -6,7 +6,7 @@ export const LeftSide = {
   {
     hardSkills :
     [
-      'HTML', 'CSS', 'JS', 'REACT', 'REDUX'
+      'HTML', 'CSS', 'SCSS', 'JS', 'TS', 'REACT', 'JEST', 'REDUX', 
     ],
     languages :
     [
